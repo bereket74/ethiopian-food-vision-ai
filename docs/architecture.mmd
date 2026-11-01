@@ -1,0 +1,13 @@
+flowchart LR
+  A[Public HF parquet mirror<br/>1.1K rows; license undeclared] --> B[Decode images + labels]
+  B --> C[Remove exact byte duplicates]
+  C --> D[Stratified 70/15/15 split<br/>seed 42]
+  D --> E[Train augmentation<br/>crop, flip, rotation, color jitter]
+  E --> F[Scratch CNN baseline]
+  E --> G[ImageNet MobileNetV3-Small<br/>head training + last-block fine-tune]
+  F --> H[Validation macro-F1<br/>checkpoint selection]
+  G --> H
+  H --> I[Held-out test evaluation<br/>macro-F1, balanced accuracy, per-class metrics]
+  I --> J[Confusion matrix + error CSV]
+  H --> K[Local Gradio inference app]
+  L[Rights unresolved] -. no public model/Space .-> K

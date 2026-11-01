@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.env
+.DS_Store
+# Dataset and trained artifacts are intentionally not committed because upstream
+# image licensing is unresolved. Do not upload these files to a public host.
+data/raw/*
+data/processed/*
+artifacts/*
+results/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!artifacts/.gitkeep
+!results/.gitkeep

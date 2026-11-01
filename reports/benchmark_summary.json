@@ -1,0 +1,220 @@
+{
+  "dataset": {
+    "source_dataset": "Tinsae/Ethiopian-foods",
+    "source_rows": 1097,
+    "readable_unique_images": 1093,
+    "exact_duplicate_rows_removed": 4,
+    "corrupt_images_skipped": 0,
+    "split_seed": 42,
+    "split_sizes": {
+      "train": 765,
+      "valid": 164,
+      "test": 164
+    },
+    "class_counts_by_split": {
+      "train": {
+        "beyaynetu": 132,
+        "chechebsa": 41,
+        "doro_wat": 89,
+        "firfir": 58,
+        "genfo": 71,
+        "kikil": 54,
+        "kitfo": 99,
+        "shekla_tibs": 69,
+        "shiro_wat": 60,
+        "tihlo": 21,
+        "tire_siga": 71
+      },
+      "valid": {
+        "beyaynetu": 28,
+        "chechebsa": 9,
+        "doro_wat": 19,
+        "firfir": 13,
+        "genfo": 15,
+        "kikil": 12,
+        "kitfo": 21,
+        "shekla_tibs": 14,
+        "shiro_wat": 13,
+        "tihlo": 5,
+        "tire_siga": 15
+      },
+      "test": {
+        "beyaynetu": 28,
+        "chechebsa": 8,
+        "doro_wat": 19,
+        "firfir": 12,
+        "genfo": 16,
+        "kikil": 11,
+        "kitfo": 22,
+        "shekla_tibs": 15,
+        "shiro_wat": 13,
+        "tihlo": 4,
+        "tire_siga": 16
+      }
+    },
+    "license_status": "Not declared on the source Hub dataset card; local research only."
+  },
+  "selection_metric": "validation macro-F1",
+  "test_split_used_for_checkpoint_selection": false,
+  "runs": {
+    "baseline": {
+      "display_name": "Scratch CNN",
+      "best_epoch": 5,
+      "validation_macro_f1": 0.5266029096068622,
+      "test_examples": 164,
+      "test_accuracy": 0.45121951219512196,
+      "test_macro_f1": 0.43666874472501066,
+      "test_balanced_accuracy": 0.4480820216466149,
+      "per_class": {
+        "beyaynetu": {
+          "support": 28,
+          "precision": 0.5357142857142857,
+          "recall": 0.5357142857142857,
+          "f1": 0.5357142857142857
+        },
+        "chechebsa": {
+          "support": 8,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        },
+        "doro_wat": {
+          "support": 19,
+          "precision": 1.0,
+          "recall": 0.3684210526315789,
+          "f1": 0.5384615384615384
+        },
+        "firfir": {
+          "support": 12,
+          "precision": 0.5,
+          "recall": 0.75,
+          "f1": 0.6
+        },
+        "genfo": {
+          "support": 16,
+          "precision": 0.2631578947368421,
+          "recall": 0.3125,
+          "f1": 0.2857142857142857
+        },
+        "kikil": {
+          "support": 11,
+          "precision": 0.6666666666666666,
+          "recall": 0.36363636363636365,
+          "f1": 0.47058823529411764
+        },
+        "kitfo": {
+          "support": 22,
+          "precision": 0.875,
+          "recall": 0.3181818181818182,
+          "f1": 0.4666666666666667
+        },
+        "shekla_tibs": {
+          "support": 15,
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1": 0.2857142857142857
+        },
+        "shiro_wat": {
+          "support": 13,
+          "precision": 0.5,
+          "recall": 0.38461538461538464,
+          "f1": 0.43478260869565216
+        },
+        "tihlo": {
+          "support": 4,
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1": 0.16666666666666666
+        },
+        "tire_siga": {
+          "support": 16,
+          "precision": 0.5,
+          "recall": 0.8125,
+          "f1": 0.6190476190476191
+        }
+      }
+    },
+    "mobilenet_v3_small": {
+      "display_name": "MobileNetV3-Small (ImageNet transfer)",
+      "best_epoch": 7,
+      "validation_macro_f1": 0.906778405429714,
+      "test_examples": 164,
+      "test_accuracy": 0.8048780487804879,
+      "test_macro_f1": 0.7703644790448251,
+      "test_balanced_accuracy": 0.7938555264512204,
+      "per_class": {
+        "beyaynetu": {
+          "support": 28,
+          "precision": 0.9310344827586207,
+          "recall": 0.9642857142857143,
+          "f1": 0.9473684210526315
+        },
+        "chechebsa": {
+          "support": 8,
+          "precision": 0.625,
+          "recall": 0.625,
+          "f1": 0.625
+        },
+        "doro_wat": {
+          "support": 19,
+          "precision": 0.8,
+          "recall": 0.8421052631578947,
+          "f1": 0.8205128205128205
+        },
+        "firfir": {
+          "support": 12,
+          "precision": 0.5333333333333333,
+          "recall": 0.6666666666666666,
+          "f1": 0.5925925925925926
+        },
+        "genfo": {
+          "support": 16,
+          "precision": 0.8666666666666667,
+          "recall": 0.8125,
+          "f1": 0.8387096774193549
+        },
+        "kikil": {
+          "support": 11,
+          "precision": 1.0,
+          "recall": 0.7272727272727273,
+          "f1": 0.8421052631578947
+        },
+        "kitfo": {
+          "support": 22,
+          "precision": 1.0,
+          "recall": 0.7272727272727273,
+          "f1": 0.8421052631578947
+        },
+        "shekla_tibs": {
+          "support": 15,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888
+        },
+        "shiro_wat": {
+          "support": 13,
+          "precision": 0.9,
+          "recall": 0.6923076923076923,
+          "f1": 0.782608695652174
+        },
+        "tihlo": {
+          "support": 4,
+          "precision": 0.3076923076923077,
+          "recall": 1.0,
+          "f1": 0.47058823529411764
+        },
+        "tire_siga": {
+          "support": 16,
+          "precision": 0.7777777777777778,
+          "recall": 0.875,
+          "f1": 0.8235294117647058
+        }
+      }
+    }
+  },
+  "absolute_improvement_transfer_minus_baseline": {
+    "accuracy": 0.3536585365853659,
+    "macro_f1": 0.3336957343198144,
+    "balanced_accuracy": 0.34577350480460545
+  }
+}

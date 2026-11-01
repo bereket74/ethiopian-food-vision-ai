@@ -1,0 +1,3 @@
+"""Ethiopian food vision research prototype."""
+
+__version__ = "0.1.0"
